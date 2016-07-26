@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'BubbleWitchSaga';
+  src: url('../../fonts/BubbleWitchSaga.eot?#iefix') format('embedded-opentype'),  url('../../fonts/BubbleWitchSaga.woff') format('woff'), url('../../fonts/BubbleWitchSaga.ttf')  format('truetype'), url('../../fonts/BubbleWitchSaga.svg#BubbleWitchSaga') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/// BEM Mixins
+///
+/// Block Element
+/// @access public
+/// @param {String} $element - Element's name
+@mixin element($element) {
+    &__#{$element} {
+        @content;
+    }
+}
+
+/// Block Modifier
+/// @access public
+/// @param {String} $modifier - Modifier's name
+@mixin modifier($modifier) {
+    &--#{$modifier} {
+        @content;
+    }
+}
+
+
+h1.title
+{
+  font-family: 'BubbleWitchSaga';
+}
+
+

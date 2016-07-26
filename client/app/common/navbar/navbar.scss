@@ -1,0 +1,18 @@
+@import '../common.scss';
+
+.navbar-brand-link, .navbar-link {
+        font-family: 'BubbleWitchSaga', sans-serif;
+}
+
+ .navbar-brand-link{
+        text-transform: uppercase;
+        color: white;
+        font-size: 25px;
+}
+.navbar-link {
+    color: white;
+}
+.navbar-brand-link:hover, .navbar-brand-link:active, .navbar-brand-link:focus {
+      color: white;
+      text-decoration: none;
+}
