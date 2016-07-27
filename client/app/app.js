@@ -7,7 +7,7 @@ import AppComponent from './app.component.js';
 import 'animate.css';
 
 import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.css';
+// import 'bootstrap/dist/css/bootstrap.css';
 import './theme/bootstrap.css'; // Custom bootswatch theme
 
 
