@@ -1,7 +1,6 @@
 class CollectionController {
-  constructor($state, kingService) {
+  constructor() {
     'ngInject';
-    console.log(kingService);
     this.name = 'collection';
   }
 }

@@ -3,8 +3,8 @@ import { games } from './games.json';
 export default class KingApi {
 
   constructor() {
-    console.log('API Ready: ', games.length);
-    window.api = this; // for debug FIXME
+    // console.log('API Ready: ', games.length);
+    // window.api = this; // FIXME: for debug
     const imgRoot = 'http://royal1.midasplayer.com/images/games/';
     this.games = games.map((game) => Object.assign(game, {
       inCollection: false,
@@ -30,7 +30,7 @@ export default class KingApi {
   }
 
   getRandomGames(numberOfGames = 5) {
-    console.log('getRandomGames');
+    // console.log('getRandomGames');
     const rGames = [];
     for (let i = 0; i < numberOfGames; i++) {
       const randomIndex = Math.floor((Math.random() * this.games.length) + 1);
@@ -44,15 +44,15 @@ export default class KingApi {
     let nextPage = null;
     const perPage = 8;
     const offset = (page - 1) * perPage;
-    console.info('Request page', page, 'keyword', keyword,
-      'inCollection', inCollection, 'offset', offset);
+    // console.info('Request page', page, 'keyword', keyword,
+    //  'inCollection', inCollection, 'offset', offset);
     let cGames = this.games;
     if (inCollection) {
       cGames = cGames.filter((game) => game.inCollection);
     }
     if (keyword && keyword.length > 0) {
       const lowerCaseKeyword = keyword.trim().toLowerCase();
-      console.log('Searching for', lowerCaseKeyword);
+      // console.log('Searching for', lowerCaseKeyword);
       cGames = cGames.filter((game) => (game.name.toLowerCase().indexOf(lowerCaseKeyword) >= 0));
     }
     const pgGames = cGames
