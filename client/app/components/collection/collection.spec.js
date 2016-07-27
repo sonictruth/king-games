@@ -31,9 +31,7 @@ describe('Collection', () => {
   describe('Template', () => {
     // template specs
     // tip: use regex to ensure correct bindings are used e.g., {{  }}
-    it('has name in template [REMOVE]', () => {
-      expect(CollectionTemplate).to.match(/{{\s?\$ctrl\.name\s?}}/g);
-    });
+
   });
 
   describe('Component', () => {
