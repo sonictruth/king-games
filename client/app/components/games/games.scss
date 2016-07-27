@@ -1,0 +1,40 @@
+
+
+.no-games{
+  font-family: 'BubbleWitchSaga';
+  font-size: 30px;
+}
+.game-box{
+  position: relative;
+  padding: 5px;
+  border-radius: 5px;
+  font-family: 'BubbleWitchSaga';
+  background-color: #1995dc;
+  color: white;
+  margin-top: 20px;
+  cursor: pointer;
+  .game-collection:hover{
+    font-size: 20px;
+    color: inherit;
+  }
+  .game-img {
+    width: 100%;
+    display: none;
+    @media (max-width: 766px) {
+      width: 90%;
+      margin: auto;
+    }
+  }
+  .game-in-collection{
+    color: yellow!important;
+  }
+
+  .game-collection{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    height: 20px;
+    cursor: pointer;
+    color: white;
+  }
+}

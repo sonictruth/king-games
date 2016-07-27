@@ -1,7 +1,8 @@
 class GameController {
-  constructor($state, kingService) {
+  constructor($state, $scope, kingService) {
     'ngInject';
-    console.log(kingService);
+    this.$scope = $scope;
+    this.$scope.game = kingService.getGameById($state.params.id)[0];
     this.name = 'game';
   }
 }

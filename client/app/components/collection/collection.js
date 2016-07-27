@@ -10,7 +10,8 @@ const collectionModule = angular.module('collection', [
   'ngInject';
   $stateProvider
     .state('collection', {
-      url: '/collection',
+      url: '/collection/{page:int}/{keyword}',
+      params: { page: { value: 1 }, keyword: { value: '' } },
       template: '<collection></collection>',
     });
 })

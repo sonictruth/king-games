@@ -1,3 +1,20 @@
-<div>
-  <h1>{{ $ctrl.name }}</h1>
-</div>
+<section class="container text-center">
+  
+  <div class="game-header">
+
+  <img class="game-header-img animated slideInDown" ng-src="{{game.imgBig}}" alt="{{game.name}}" title="{{game.name}}" onload="this.style.display = 'block';">
+
+  <div class="game-header-button">
+    <a  class="btn btn-default" ng-class="{true: 'game-in-collection', false: 'game-not-in-collection'}[game.inCollection]" ng-click="game.inCollection = !game.inCollection;"><span class="glyphicon {{ game.inCollection ?  'glyphicon-remove' : 'glyphicon-plus'}}" aria-hidden="true"></span>
+{{ game.inCollection ?  'Remove from Collection' : 'Add to Collection'}}
+    </a>
+  </div>
+  </div>
+
+
+  <div class="game-link animated zoomIn">
+    <a  href="http://www.royalgames.com/{{game.url}}" target="_blank">
+    <img class="game-link-img"  ng-src="{{game.imgScreen}}"></a>
+    <div>click to play</div>
+  </div>
+</section>

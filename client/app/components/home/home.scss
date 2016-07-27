@@ -1,6 +1,23 @@
-.home {
+
+
+#games-carousel {
+  cursor: pointer;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 764px;
+  @media (max-width: 800px) {
+    width: 90%;
+  }
+  .games-carousel-img {
+    width: 100%;
+    border-radius: 20px;
+    border: 5px solid #1995dc;
+  }
+  .carousel-inner{
+      border-radius: 15px;
+  }
 }
 
-.game-img {
-  display: none;
-}

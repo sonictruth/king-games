@@ -25,6 +25,20 @@ export default class KingApi {
     });
   }
 
+  getGameById(id) {
+    return this.games.filter((game) => (game.short === id));
+  }
+
+  getRandomGames(numberOfGames = 5) {
+    console.log('getRandomGames');
+    const rGames = [];
+    for (let i = 0; i < numberOfGames; i++) {
+      const randomIndex = Math.floor((Math.random() * this.games.length) + 1);
+      rGames.push(this.games[randomIndex]);
+    }
+    return rGames;
+  }
+
   getGames(page = 1, keyword = '', inCollection = false) {
     let prevPage = null;
     let nextPage = null;
