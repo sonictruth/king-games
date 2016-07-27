@@ -3,13 +3,7 @@ import uiRouter from 'angular-ui-router';
 import Common from './common/common.js';
 import Components from './components/components.js';
 import AppComponent from './app.component.js';
-
-import 'animate.css';
-
 import 'bootstrap';
-// import 'bootstrap/dist/css/bootstrap.css';
-import './theme/bootstrap.css'; // Custom bootswatch theme
-
 
 angular.module('app', [
   uiRouter,

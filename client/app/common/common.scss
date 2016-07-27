@@ -5,6 +5,10 @@
   font-style: normal;
 }
 
+@mixin drop-shadow() {
+    border: 1px solid red;
+    box-shadow:$top $left $blur $color #{$inset};
+}
 
 /// BEM Mixins
 ///
